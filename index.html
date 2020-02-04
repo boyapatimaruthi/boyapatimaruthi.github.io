@@ -14,14 +14,31 @@
         font-family: monospace;
     }
     
+    body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
    
     
     </style>
 
-    <body class="bg-dark landing_page row align-items-center">
+    <body class="landing_page row align-items-center">
         <div>
             <img class="rounded-circle z-depth-3" alt="100x100" src="https://media-exp1.licdn.com/dms/image/C5103AQE6m7Ymgf9UoA/profile-displayphoto-shrink_200_200/0?e=1586390400&v=beta&t=9LwtEUJMK2xe1G9IOVgRFd8yoKYnToZstITKAaBJKZM" >
-            <h1><span style="color: deepskyblue;">Hi,</span> I'm Maruthi</h1>
+            <h1><span style="color: rgb(0, 255, 242);">Hi,</span> I'm Maruthi</h1>
             <pre>
             <code style="color: chartreuse;">
  
@@ -36,4 +53,6 @@
             
         </div>
     </body>
+
+    
 </html>
