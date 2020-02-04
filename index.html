@@ -1,6 +1,81 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+        $(document).ready(function(){
+ 
+ var buttons = ".buttons .nav-link:nth-child";
+
+         // LinkedIn
+         $( buttons + '(1) .icon').hover(
+             //  hover function
+             function(){
+             $(this).css({
+                 "border-radius" : "30px",
+                 "padding" : "20px 10px"
+             });
+             if(true){
+                 $( buttons + '(1) .icon-text').css({
+                     "width" : "130px",
+                     "padding" : "6px 39px"
+                 });
+             }
+             },
+     
+             // hover out function
+             function(){
+                 $(this).css({
+                     "border-radius" : "20px 10px",
+                     "padding" : "10px 13px"
+                 });
+     
+                 $(buttons + '(1) .icon-text').css({
+                     "width" : "0px",
+                     "padding" : "6px 0px"
+                 });
+                     
+             }); 
+
+
+             // Pinterest 
+             $( buttons + '(2) .icon').hover(
+                 //  hover function
+                 function(){
+                 $(this).css({
+                     "border-radius" : "30px",
+                     "padding" : "20px 10px"
+                 });
+                 if(true){
+                     $( buttons + '(2) .icon-text').css({
+                         "width" : "130px",
+                         "padding" : "6px 39px"
+                     });
+                 }
+                 },
+         
+                 // hover out function
+                 function(){
+                     $(this).css({
+                         "border-radius" : "20px 10px",
+                         "padding" : "10px 13px"
+                     });
+         
+                     $(buttons + '(2) .icon-text').css({
+                         "width" : "0px",
+                         "padding" : "6px 0px"
+                     });
+                         
+                 }); 
+
+});
+        
+        </script>
+
+
+
     </head>
     <style>
     .landing_page {
@@ -32,11 +107,62 @@
         }
     }
    
+
+    .buttons{
+        margin-top: 10%;
+        height: 73vh;
+        margin-left: 40%;
+    }
+    .buttons .nav-link{
+        margin:15px 0px;
+        position: relative;
+    }
+    .buttons .nav-link:nth-child(1){
+        margin-top: 20px;
+    }
+    .buttons .icon{
+        background-color: #36515E;
+        padding: 10px 13px;
+        color: white;
+        font-size: 1em;
+        border-radius: 20px 10px;
+        transition: all 400ms ease;
+        position: relative;
+        z-index: 4;
+    }
+    
+    .buttons .nav-link:nth-child(1) .icon{
+        color: #ffffff;
+        background-color: black;
+        padding: 14px 13px;
+    }
+    .buttons .nav-link:nth-child(2) .icon{
+        color: #ffffff;
+        background-color: #0D5C63;
+    }
+
+    .buttons .icon-text{
+        background-color: #000;
+        position: absolute;
+        left: 10px;
+        top: -1px;
+        z-index: 0;
+        width: 0px;
+        padding : 6px 0px;
+        border-radius: 30px;
+        color: white;
+        overflow: hidden;
+        transition: all 300ms ease;
+    }
+    .buttons .nav-link:nth-child(2) .icon-text {
+        background-color: #0D5C63;
+    }
+
     
     </style>
 
-    <body class="landing_page row align-items-center">
-        <div>
+    <body class="landing_page align-items-center">
+        <div >
             <img class="rounded-circle z-depth-3" alt="100x100" src="https://media-exp1.licdn.com/dms/image/C5103AQE6m7Ymgf9UoA/profile-displayphoto-shrink_200_200/0?e=1586390400&v=beta&t=9LwtEUJMK2xe1G9IOVgRFd8yoKYnToZstITKAaBJKZM" >
             <h1><span style="color: rgb(0, 255, 242);">Hi,</span> I'm Maruthi</h1>
             <pre>
@@ -51,8 +177,29 @@
             </code>
             </pre>
             
-        </div>
+        </div >
+
+
+
+        <div style="position: fixed; bottom: 10px; right: 120px; height: 150px;">
+            <div class="buttons">
+                <ul class="navbar-nav">
+                    <li class="nav-link"><a href="https://github.com/boyapatimaruthi/">
+                        <span class="icon"><i class="fab fa-github"></i></span></a>
+                        <span class="icon-text">GitHub</span>
+                    </li>
+                       
+                    <li class="nav-link"><a href="https://www.linkedin.com/in/boyapatimaruthi/">
+                        <span class="icon"><i class="fab fa-linkedin-in"></i></span></a>
+                        <span class="icon-text">Linkedin</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div >
+
     </body>
 
+    
     
 </html>
