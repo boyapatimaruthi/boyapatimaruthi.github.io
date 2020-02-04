@@ -1,1 +1,0 @@
-# boyapatimaruthi.github.io
